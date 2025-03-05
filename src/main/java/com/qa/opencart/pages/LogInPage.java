@@ -19,6 +19,7 @@ public class LogInPage {
     private By passwordField = By.id("input-password");
     private By forgotLink = By.linkText("Forgotten Password");
     private By loginButton = By.xpath("//input[@value='Login']");
+    private By righpanelLinks = By.xpath("//aside[@id='column-right']//a");
 
 
 
@@ -40,6 +41,12 @@ public class LogInPage {
         ele.doClick(loginButton);
         return new AccountPage(driver);
     }
+
+    public int  righPanelLinksCount(){
+        int count = ele.elementsCount(righpanelLinks);
+        return count;
+    }
+
 
 
 

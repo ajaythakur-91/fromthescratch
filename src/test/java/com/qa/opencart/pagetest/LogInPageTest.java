@@ -24,4 +24,9 @@ public class LogInPageTest extends BaseTest {
         String title =accPage.titleTest();
         Assert.assertEquals(title,AppConstent.ACCOUNT_PAGE_TITLE,AppErr.TITLE_NOT_MATCHED);
     }
+    @Test
+    public void elementCountTest(){
+        int count = logInPage.righPanelLinksCount();
+        Assert.assertEquals(count,13,AppErr.COUNT_NOT_MATCHED);
+    }
 }

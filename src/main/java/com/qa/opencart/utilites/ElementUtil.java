@@ -5,6 +5,9 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ElementUtil {
 
     private WebDriver driver;
@@ -45,6 +48,33 @@ public class ElementUtil {
             return false;
         }
 
+    }
+
+    //********************findelements*******************************************
+
+
+    public List<WebElement> dogetElements(By locator){
+
+        return driver.findElements(locator);
+    }
+
+    public List<String> doGetElementsText(By locator){
+        List<WebElement>elementList = dogetElements(locator);
+        List<String>textList= new ArrayList<>() ;
+
+        for (WebElement e : elementList ){
+
+               String txt  =e.getText();
+               textList.add(txt);
+        }
+
+        return textList;
+    }
+
+    public int elementsCount(By locator){
+        List<WebElement>elementList =dogetElements(locator);
+        int count =elementList.size();
+        return count;
     }
 
 
