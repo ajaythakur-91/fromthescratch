@@ -11,6 +11,13 @@
 
         </classes>
     </test>
+    <test name="OpenCartAccountPageTest">
+
+        <classes>
+            <class name="com.qa.opencart.pagetest.AccountPageTest" />
+
+        </classes>
+    </test>
 
 
 </suite>
