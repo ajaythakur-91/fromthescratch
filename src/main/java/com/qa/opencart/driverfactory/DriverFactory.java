@@ -67,7 +67,7 @@ public class DriverFactory {
         } else {
 
 
-            System.out.println("Test Cases Running on :" + envName + " environment");
+            System.out.println("Test Cases Running on :" + envName + " mvnenvironment");
 
             try {
                 switch (envName.trim().toLowerCase()) {
