@@ -35,9 +35,9 @@ public class AccountPage {
         return headers;
     }
 
-    public String searchFunctions(String prodName){
+    public SearchResultPage searchFunctions(String prodName){
         ele.doSendKeys(searchBox,prodName);
         ele.doClick(serchIcon);
-        return ele.getPageTitle();
+        return new SearchResultPage(driver);
     }
 }

@@ -3,6 +3,7 @@ package com.qa.opencart.pagetest;
 import com.qa.opencart.appconstent.AppConstent;
 import com.qa.opencart.apperr.AppErr;
 import com.qa.opencart.basetest.BaseTest;
+import com.qa.opencart.pages.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -38,8 +39,17 @@ public class AccountPageTest extends BaseTest {
     @Test
             (priority = 3)
     public void searchFuncTest(){
-        String prod =accPage.searchFunctions("iphone");
+        resultPage =accPage.searchFunctions("iphone");
+        String prod = resultPage.pageTitle();
         Assert.assertEquals(prod.contains("iphone"),true,"=search failed=");
     }
+    @Test(priority =4 )
+    public void searchBoxValueTest(){
+          resultPage = accPage.searchFunctions("iphone");
+          String value =resultPage.serachBoxValue();
+          Assert.assertEquals(value,"iphone","value not matched");
+    }
+
+
 
 }
