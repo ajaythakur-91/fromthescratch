@@ -16,6 +16,9 @@ public class ProdInfoTest extends BaseTest {
 
     @Test
     public void productDetails(){
+        /**
+         * this will print details
+         */
         resultPage = accPage.searchFunctions("macbook");
         prodInfo = resultPage.selectProd("MacBook");
         System.out.println(prodInfo.prodInfofunction());
