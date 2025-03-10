@@ -3,6 +3,7 @@ package com.qa.opencart.pagetest;
 import com.qa.opencart.basetest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
@@ -14,11 +15,9 @@ public class ProdInfoTest extends BaseTest {
     }
 
 
+
     @Test
     public void productDetails(){
-        /**
-         * this will print details
-         */
         resultPage = accPage.searchFunctions("macbook");
         prodInfo = resultPage.selectProd("MacBook");
         System.out.println(prodInfo.prodInfofunction());

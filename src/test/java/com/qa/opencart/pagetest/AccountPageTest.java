@@ -6,6 +6,7 @@ import com.qa.opencart.basetest.BaseTest;
 import com.qa.opencart.pages.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -48,6 +49,23 @@ public class AccountPageTest extends BaseTest {
           resultPage = accPage.searchFunctions("iphone");
           String value =resultPage.serachBoxValue();
           Assert.assertEquals(value,"iphone","value not matched");
+    }
+    @DataProvider
+    public Object[][]getData(){
+        return new Object[][]{{"macbook",3},
+                {"iphone",1},
+                {"canon",1},
+                {"samsung",2}
+        };
+
+    }
+
+    @Test(dataProvider = "getData",priority = 5)
+    public void searchCountTest(String prodName,int expectedCount){
+        resultPage = accPage.searchFunctions(prodName);
+        int count=resultPage.searchResultCount();
+        Assert.assertEquals(count,expectedCount,"=count not matched=");
+
     }
 
 
