@@ -10,6 +10,7 @@ public class SearchResultPage {
 
 
     private By searchBox = By.xpath("//div[@id='search']/input[@name='search']");
+    private By resultProd = By.className("product-thumb");
 
     public SearchResultPage(WebDriver driver){
         this.driver = driver;
@@ -31,6 +32,10 @@ public class SearchResultPage {
         ele.doClick(prod);
         return new ProdInfoPage(driver);
 
+    }
+
+    public int searchResultCount(){
+        return ele.elementsCount(resultProd);
     }
 
 

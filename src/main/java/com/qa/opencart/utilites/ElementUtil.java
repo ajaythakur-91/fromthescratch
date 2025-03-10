@@ -78,6 +78,11 @@ public class ElementUtil {
     }
 
 
+    public String getElementText(By locator){
+        return doGetElement(locator).getText();
+    }
+
+
     //*********properties/attributevalue*******************************
 
 
