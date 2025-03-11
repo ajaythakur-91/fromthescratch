@@ -1,10 +1,7 @@
 package com.qa.opencart.basetest;
 
 import com.qa.opencart.driverfactory.DriverFactory;
-import com.qa.opencart.pages.AccountPage;
-import com.qa.opencart.pages.LogInPage;
-import com.qa.opencart.pages.ProdInfoPage;
-import com.qa.opencart.pages.SearchResultPage;
+import com.qa.opencart.pages.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -19,6 +16,7 @@ public class BaseTest {
     protected AccountPage accPage;
     protected SearchResultPage resultPage;
     protected ProdInfoPage prodInfo;
+    protected RegistrationPage regPage;
 
     @BeforeTest
     public void setUp(){

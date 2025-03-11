@@ -19,5 +19,22 @@
         </classes>
     </test>
 
+    <test name="OpenCartProdInfo">
+
+        <classes>
+            <class name="com.qa.opencart.pagetest.ProdInfoTest" />
+
+        </classes>
+    </test>
+    <test name="OpenCartRegistrationPage">
+
+        <classes>
+            <class name="com.qa.opencart.pagetest.RegistrationPageTest" />
+
+        </classes>
+    </test>
+
+
+
 
 </suite>

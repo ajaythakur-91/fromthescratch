@@ -20,6 +20,7 @@ public class LogInPage {
     private By forgotLink = By.linkText("Forgotten Password");
     private By loginButton = By.xpath("//input[@value='Login']");
     private By righpanelLinks = By.xpath("//aside[@id='column-right']//a");
+    private By registrationPageLink = By.linkText("Register");
 
 
 
@@ -45,6 +46,12 @@ public class LogInPage {
     public int  righPanelLinksCount(){
         int count = ele.elementsCount(righpanelLinks);
         return count;
+    }
+
+
+    public RegistrationPage navigateToRegistrationPage(){
+        ele.doClick(registrationPageLink);
+        return new RegistrationPage(driver);
     }
 
 
