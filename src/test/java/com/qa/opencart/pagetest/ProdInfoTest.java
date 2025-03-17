@@ -20,7 +20,7 @@ public class ProdInfoTest extends BaseTest {
     public void productDetails(){
         resultPage = accPage.searchFunctions("macbook");
         prodInfo = resultPage.selectProd("MacBook");
-        System.out.println(prodInfo.prodInfofunction());
+
     }
 
 
